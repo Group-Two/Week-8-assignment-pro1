@@ -53,10 +53,10 @@ public class MyClientTest1 {
     
     System.out.println("\n-----Test equals function-----");
     
-    while(A.equals(B)){
+    if(A.equals(B)){
     System.out.println("They are equal");
-    break;
-    }
+    }else
+    {System.out.println("They are not equal");}
     System.out.println("hashcode of Stack A:"+A.hashCode());
     System.out.println("hashcode of Stack B:"+B.hashCode());
 
@@ -97,7 +97,7 @@ public class MyClientTest1 {
   	  System.out.println("\n-----Test clone function-----");
       bag Bc = Ba.clone();
       while(Ba.equals(Bc)){
-        System.out.println("Bag C are equal to A as its clone");
+        System.out.println("Bag C is equal to A as its clone");
         break;
       }
       System.out.println("hashcode of Bag A:"+Ba.hashCode());
@@ -139,7 +139,7 @@ public class MyClientTest1 {
 	   
 	    stack C = A.clone();
 	    while(A.equals(C)){
-	        System.out.println("C are equal to A as its clone");
+	        System.out.println("Stack C is equal to A as its clone");
 	        break;
 	    }
 	    System.out.println("hashcode of Stack A:"+A.hashCode());
