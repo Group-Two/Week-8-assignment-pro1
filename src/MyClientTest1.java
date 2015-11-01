@@ -109,7 +109,7 @@ public class MyClientTest1 {
 	    bag Bb = new bag(bb);
 	    
 	    System.out.println("The size of Bag B:"+ Bb.size());
-	    System.out.println("Push items in Bag B:");
+	    System.out.println("Add items in Bag B:");
 	    
 	    while(true){
 	    	Object t = sc.next();
