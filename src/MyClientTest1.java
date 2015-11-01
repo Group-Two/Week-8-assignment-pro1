@@ -6,9 +6,9 @@ public class MyClientTest1 {
 
 	public static void main(String[] args) {
 
-	String fc = "e";
+	String fc = "exit";
 	Scanner sc = new Scanner(System.in); 
-    /*
+
 	System.out.println("Set size for Stack A:");
 	int sa = sc.nextInt();
     stack A = new stack(sa);
@@ -59,7 +59,7 @@ public class MyClientTest1 {
     }
     System.out.println("hashcode of Stack A:"+A.hashCode());
     System.out.println("hashcode of Stack B:"+B.hashCode());
-    */
+
   	//Start to test Bag class  
     System.out.println("\n-----Start to test Bag class-----");
     System.out.println("Set size for Bag A:");
@@ -67,7 +67,7 @@ public class MyClientTest1 {
   	    bag Ba = new bag(ba);
   	    
   	    System.out.println("The size of Bag A:"+ Ba.size());
-  	    System.out.println("Push items in Bag A:");
+  	    System.out.println("Push items in Bag A:(Enter exit to finish pushing)");
   	    
   	    while(true){
   	    	Object t = sc.next();
