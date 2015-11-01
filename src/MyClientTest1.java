@@ -23,7 +23,7 @@ public class MyClientTest1 {
     		break;
     	}
     	else
-    	A.push(t);
+    	A.put(t);
     	System.out.println("You pushed:"+ t);
     }
     System.out.println("The number of objects in Stack A:"+ A.getCount());
@@ -45,7 +45,7 @@ public class MyClientTest1 {
     		break;
     	}
     	else
-    	B.push(t);
+    	B.put(t);
     	System.out.println("You pushed:"+ t);
     }
     
@@ -76,14 +76,14 @@ public class MyClientTest1 {
   	    		break;
   	    	}
   	    	else
-  	    	Ba.add(t);
+  	    	Ba.put(t);
   	    	System.out.println("You added:"+ t);
   	    }
   	    System.out.println("The number of objects in the Bag A:"+ Ba.count());
   	    
   	  //grab random item
   	  for(int i=0;i<=Ba.size;i++){
-  	  System.out.println("Randomly grab a item from the Bag A:"+ Ba.grab());
+  	  System.out.println("Randomly grab a item from the Bag A:"+ Ba.take());
   	  }
   	  
   	  //find specific item
@@ -118,7 +118,7 @@ public class MyClientTest1 {
 	    		break;
 	    	}
 	    	else
-	    	Bb.add(t);
+	    	Bb.put(t);
 	    	System.out.println("You added:"+ t);
 	    }
 	    System.out.println("The number of objects in the Bag:"+ Bb.count());

@@ -22,7 +22,7 @@ public class bag implements Cloneable{
 	 return count == size;
  }
  
- public boolean add(Object o){
+ public boolean put(Object o){
 	 if(isFull()) {
 		 System.out.println("Bag is full");
 		 return false;
@@ -31,7 +31,7 @@ public class bag implements Cloneable{
 	 return true;
  }
  
- public Object grab(){
+ public Object take(){
 	 if(isEmpty()){
 		 System.out.println("No item");
 		 return false;
