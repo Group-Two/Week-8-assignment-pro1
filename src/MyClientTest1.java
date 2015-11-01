@@ -67,7 +67,7 @@ public class MyClientTest1 {
   	    bag Ba = new bag(ba);
   	    
   	    System.out.println("The size of Bag A:"+ Ba.size());
-  	    System.out.println("Push items in Bag A:(Enter exit to finish pushing)");
+  	    System.out.println("Add items in Bag A:(Enter exit to finish adding)");
   	    
   	    while(true){
   	    	Object t = sc.next();
