@@ -100,8 +100,8 @@ public class MyClientTest1 {
         System.out.println("Bag C are equal to A as its clone");
         break;
       }
-      System.out.println("hashcode of Stack A:"+Ba.hashCode());
-      System.out.println("hashcode of Stack C:"+Bc.hashCode());	    
+      System.out.println("hashcode of Bag A:"+Ba.hashCode());
+      System.out.println("hashcode of Bag C:"+Bc.hashCode());	    
    
   	  //Create another Bag
   	  System.out.println("\nSet size for Bag B:");
