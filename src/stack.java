@@ -47,7 +47,7 @@ public class stack implements Cloneable{
 	 return t;
  }
 
- public Object take2(){
+ public Object sampling(){
 	 
 	 if(isEmpty()){
 		 System.out.println("No item");
@@ -77,7 +77,7 @@ public class stack implements Cloneable{
 	 else
 	 {
 		 while(!this.isEmpty()&&!s.isEmpty()){
-			 if(this.take2().equals(s.take2()) == false)
+			 if(this.sampling().equals(s.sampling()) == false)
 			 {
 				 return false;
 			 }
