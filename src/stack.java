@@ -1,10 +1,10 @@
-public class stack implements Cloneable{
+public class Stack implements Cloneable{
 	
  private Object[] data;
  private int top = -1;
  int maxsize;
  
- public stack(int maxsize) {
+ public Stack(int maxsize) {
 	 this.maxsize = maxsize;
 	 data = new Object[maxsize];
  }
@@ -64,10 +64,10 @@ public class stack implements Cloneable{
 		return true; 
 	 if(other == null)
 		return false;
-	 if(!(other instanceof stack))
+	 if(!(other instanceof Stack))
 		return false;
 	 
-	 stack s = (stack)other;
+	 Stack s = (Stack)other;
 	 //
 	    
 	 if((this.getSize()!= s.getSize())||(this.getCount()!=s.getCount())){
@@ -96,9 +96,9 @@ public class stack implements Cloneable{
 	 return result;
  }
  
- @Override public stack clone(){
+ @Override public Stack clone(){
 	 try {
-		 stack result = (stack) super.clone();
+		 Stack result = (Stack) super.clone();
 		 result.data = data.clone();
 		 return result;
 	 }catch (CloneNotSupportedException e){

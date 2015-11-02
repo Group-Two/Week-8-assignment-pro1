@@ -1,7 +1,7 @@
-public class bag implements Cloneable{
+public class Bag implements Cloneable{
  private Object[] item;
  int size,count;
- public bag(int size){
+ public Bag(int size){
 	 this.size = size;
 	 this.count = 0;
 	 item = new Object[size];
@@ -10,14 +10,7 @@ public class bag implements Cloneable{
  public boolean isEmpty(){
 	 return count == 0;
  }
- 
- /*public Object getlast(){
-	 Object result = item[count-1];
-	 count--;
-	 return result;
- }
- */
- 
+
  public boolean isFull(){
 	 return count == size;
  }
@@ -40,6 +33,15 @@ public class bag implements Cloneable{
 	 Object result = item[i];
 	 item[i] = null;
 	 return result;
+ }
+ 
+ public Object grab(){
+	 if(isEmpty()){
+		 System.out.println("No item");
+		 return false;
+	 }
+	 int i = (int)(Math.random()*count);
+	 return item[i];
  }
  
  public int size(){
@@ -80,10 +82,10 @@ public class bag implements Cloneable{
 		return true; 
 	 if(other == null)
 		return false;
-	 if(!(other instanceof bag))
+	 if(!(other instanceof Bag))
 		return false;
 	 
-	 final bag s = (bag)other;
+	 final Bag s = (Bag)other;
 	 
 	 if((this.size()!= s.size())||(this.count()!=s.count())){
 		 return false;
@@ -111,9 +113,9 @@ public class bag implements Cloneable{
 	 result = 31*result + sum;
 	 return result;
  }
- @Override public bag clone(){
+ @Override public Bag clone(){
 	 try {
-		 bag result = (bag) super.clone();
+		 Bag result = (Bag) super.clone();
 		 result.item = item.clone();
 		 return result;
 	 }catch (CloneNotSupportedException e){

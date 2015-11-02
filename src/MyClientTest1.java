@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class MyClientTest1 {
 	
-	private static final bag Ba = null;
+	//private static final Bag Ba = null;
 
 	public static void main(String[] args) {
 
@@ -11,7 +11,7 @@ public class MyClientTest1 {
 
 	System.out.println("Set size for Stack A:");
 	int sa = sc.nextInt();
-    stack A = new stack(sa);
+    Stack A = new Stack(sa);
     
     System.out.println("The size of Stack A:"+ A.getSize());
     System.out.println("Push items in Stack A:(Enter exit to finish pushing)");
@@ -31,7 +31,7 @@ public class MyClientTest1 {
     System.out.println("\nCreate another Stack:");
     System.out.println("Set size for Stack B:");
     int sb = sc.nextInt();
-    stack B = new stack(sb);
+    Stack B = new Stack(sb);
     
     System.out.println("The size of Stack B:"+ B.getSize());
     System.out.println("Push items in Stack B:");
@@ -64,7 +64,7 @@ public class MyClientTest1 {
     System.out.println("\n-----Start to test Bag class-----");
     System.out.println("Set size for Bag A:");
   		int ba = sc.nextInt();
-  	    bag Ba = new bag(ba);
+  	    Bag Ba = new Bag(ba);
   	    
   	    System.out.println("The size of Bag A:"+ Ba.size());
   	    System.out.println("Add items in Bag A:(Enter exit to finish adding)");
@@ -83,7 +83,7 @@ public class MyClientTest1 {
   	    
   	  //grab random item
   	  for(int i=0;i<=Ba.size;i++){
-  	  System.out.println("Randomly grab a item from the Bag A:"+ Ba.take());
+  	  System.out.println("Randomly grab a item from the Bag A:"+ Ba.grab());
   	  }
   	  
   	  //find specific item
@@ -95,7 +95,7 @@ public class MyClientTest1 {
   	  
   	  //Test Clone
   	  System.out.println("\n-----Test clone function-----");
-      bag Bc = Ba.clone();
+      Bag Bc = Ba.clone();
       while(Ba.equals(Bc)){
         System.out.println("Bag C is equal to A as its clone");
         break;
@@ -106,7 +106,7 @@ public class MyClientTest1 {
   	  //Create another Bag
   	  System.out.println("\nSet size for Bag B:");
 		int bb = sc.nextInt();
-	    bag Bb = new bag(bb);
+	    Bag Bb = new Bag(bb);
 	    
 	    System.out.println("The size of Bag B:"+ Bb.size());
 	    System.out.println("Add items in Bag B:");
@@ -133,11 +133,11 @@ public class MyClientTest1 {
 
   }
 	
-  public static void testClone(stack A){
+  public static void testClone(Stack A){
 	  
 	  System.out.println("\n-----Test clone function-----");
 	   
-	    stack C = A.clone();
+	    Stack C = A.clone();
 	
 	    System.out.println("hashcode of Stack A:"+A.hashCode());
 	    System.out.println("hashcode of Stack C:"+C.hashCode());	  
