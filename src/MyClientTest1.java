@@ -28,8 +28,6 @@ public class MyClientTest1 {
     }
     System.out.println("The number of objects in Stack A:"+ A.getCount());
     
-    testClone(A);
-    
     System.out.println("\nCreate another Stack:");
     System.out.println("Set size for Stack B:");
     int sb = sc.nextInt();
@@ -60,6 +58,8 @@ public class MyClientTest1 {
     System.out.println("hashcode of Stack A:"+A.hashCode());
     System.out.println("hashcode of Stack B:"+B.hashCode());
 
+    testClone(A);
+    
   	//Start to test Bag class  
     System.out.println("\n-----Start to test Bag class-----");
     System.out.println("Set size for Bag A:");
@@ -130,7 +130,7 @@ public class MyClientTest1 {
 	    {System.out.println("They are not equal");}
 	    System.out.println("hashcode of Bag A:"+Ba.hashCode());
 	    System.out.println("hashcode of Bag B:"+Bb.hashCode());
-	   
+
   }
 	
   public static void testClone(stack A){
@@ -138,12 +138,14 @@ public class MyClientTest1 {
 	  System.out.println("\n-----Test clone function-----");
 	   
 	    stack C = A.clone();
-	    while(A.equals(C)){
-	        System.out.println("Stack C is equal to A as its clone");
-	        break;
-	    }
+	
 	    System.out.println("hashcode of Stack A:"+A.hashCode());
-	    System.out.println("hashcode of Stack C:"+C.hashCode());	    
+	    System.out.println("hashcode of Stack C:"+C.hashCode());	  
+	    
+	    if(A.hashCode() == C.hashCode()){
+	    	System.out.println("C is equal to A");
+	    }else
+	    	System.out.println("C is not equal to A");
   }
   
 }

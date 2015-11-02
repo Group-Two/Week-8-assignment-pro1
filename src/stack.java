@@ -46,8 +46,20 @@ public class stack implements Cloneable{
 	 data[top--]=null;
 	 return t;
  }
- @Override public boolean equals(Object other){
+
+ public Object take2(){
 	 
+	 if(isEmpty()){
+		 System.out.println("No item");
+	 }
+	 Object t = data[top];
+	 top = top - 1;
+	 return t;
+ }
+
+ 
+ @Override public boolean equals(Object other){
+
 	 if(other == this)
 		return true; 
 	 if(other == null)
@@ -65,7 +77,7 @@ public class stack implements Cloneable{
 	 else
 	 {
 		 while(!this.isEmpty()&&!s.isEmpty()){
-			 if(this.take().equals(s.take()) == false)
+			 if(this.take2().equals(s.take2()) == false)
 			 {
 				 return false;
 			 }
@@ -73,6 +85,7 @@ public class stack implements Cloneable{
 	    return true;
 	 }
  }
+
  @Override public int hashCode(){
 	 int result = 17;
 	 result = 31*result + maxsize;
@@ -82,6 +95,7 @@ public class stack implements Cloneable{
 	 }
 	 return result;
  }
+ 
  @Override public stack clone(){
 	 try {
 		 stack result = (stack) super.clone();

@@ -94,11 +94,6 @@ public class bag implements Cloneable{
 				 }
 			 }
 			 if(jg == this.count)return true;
-			 /*if(this.getlast().equals(s.getlast()) == false)
-			 {
-				 System.out.println("You added:");
-				 return false;
-			 }*/
 		 }
 		 return false;
 	 }
