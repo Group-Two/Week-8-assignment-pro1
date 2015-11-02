@@ -37,7 +37,9 @@ public class bag implements Cloneable{
 		 return false;
 	 }
 	 int i = (int)(Math.random()*count);
-	 return item[i];
+	 Object result = item[i];
+	 item[i] = null;
+	 return result;
  }
  
  public int size(){
